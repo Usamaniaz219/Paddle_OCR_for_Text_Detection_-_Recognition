@@ -29,8 +29,8 @@ This repository contains a script, `Paddle_ocr_9_oct_2024.py`, for detecting and
 ## **🚀 Installation**
 1. Clone the repository:
    ```bash
-   git clone 
-   cd paddleocr-text-detection
+   git clone https://github.com/Usamaniaz219/Paddle_OCR_for_Text_Detection_-_Recognition.git 
+   cd Paddle_OCR_for_Text_Detection_-_Recognition
    ```
 2. Install dependencies:
    ```bash
