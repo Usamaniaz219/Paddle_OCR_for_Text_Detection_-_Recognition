@@ -34,7 +34,8 @@ This repository contains a script, `Paddle_ocr_9_oct_2024.py`, for detecting and
    ```
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install torch numpy opencv-python paddleocr pillow
+
    ```
 
 ---
