@@ -1,16 +1,16 @@
 
 # **PaddleOCR-Based Text Detection and Recognition**
 
-This repository contains a script, `Paddle_ocr_9_oct_2024.py`, for detecting and recognizing text in images using **PaddleOCR** and **OpenCV**. The script divides images into tiles, applies OCR, and saves detected text along with bounding boxes.
+## Overview
+This project performs text detection in images by dividing them into tiles and using Optical Character Recognition (OCR) models to extract text and bounding boxes. The detected text is annotated and saved as separate image outputs.
 
----
-
-## **📌 Features**
-- **Tile-based OCR processing** to handle large images efficiently.
-- **PaddleOCR for text detection and recognition**, supporting angled text.
-- **Bounding box extraction and annotation** on images.
-- **Automatic text overlay and storage** in a structured format.
-- **Output saved with detected text and bounding boxes** for analysis.
+## Features
+- Loads and processes images from a specified directory
+- Tiles images into smaller segments for efficient OCR processing
+- Uses PaddleOCR for text detection
+- Maps detected bounding boxes back to the original image
+- Saves processed images with annotated text and bounding boxes
+- Outputs results in a structured directory format
 
 ---
 
@@ -37,24 +37,41 @@ This repository contains a script, `Paddle_ocr_9_oct_2024.py`, for detecting and
 
    ```
 
----
+## Usage
+### 1. Prepare the Input Data
+Place your images in a directory. Supported format: `.png` (extendable to other formats).
 
-## **🛠️ Usage**
-### **Run the Script**
-Modify the image directory paths in `Paddle_ocr_9_oct_2024.py` and run:
-```bash
-python Paddle_ocr_9_oct_2024.py
+### 2. Run the Processing Function
+Use the `process_images` function to process images from a directory:
+
+```python
+process_images(directory_path, tile_width, tile_height, output_dir, overlap)
 ```
 
-### **Inputs**
-- **Image Folder:** The script reads images from the specified directory.
-- **Tile Dimensions:** Images are divided into `1024x1024` tiles.
-- **Overlap:** (Currently set to `0`, can be adjusted.)
+#### Parameters:
+- `directory_path`: Path to the directory containing input images.
+- `tile_width`: Width of each tile.
+- `tile_height`: Height of each tile.
+- `output_dir`: Directory to store results.
+- `overlap`: Overlap parameter for OCR processing.
 
-### **Outputs**
-- **Processed images with bounding boxes** in the `results/` directory.
-- **Bounding box annotations** on blank images for better visibility.
-- **Extracted text stored with the corresponding image name.**
+### 3. Output
+The processed images with bounding boxes and detected text are saved in the specified output directory, maintaining a structured subdirectory format.
+
+## Example
+```python
+process_images('input_images/', 256, 256, 'output_results/', 0.1)
+```
+
+## Notes
+- The OCR model used is `PaddleOCR` with English language support.
+- Ensure GPU support is available if using the `gpu=True` option.
+- Adjust `tile_width` and `tile_height` to optimize detection performance.
+
+## License
+This project is open-source and available for modification and improvement.
+
+
 
 ---
 
