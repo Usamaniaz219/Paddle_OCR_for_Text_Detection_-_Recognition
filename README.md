@@ -20,7 +20,6 @@ This repository contains a script, `Paddle_ocr_9_oct_2024.py`, for detecting and
 │-- 📂 data/                         # Input images
 │-- 📂 results/                      # Output images with detected text
 │-- 📜 Paddle_ocr_9_oct_2024.py       # Main script for OCR processing
-│-- 📜 requirements.txt               # Dependencies
 │-- 📜 README.md                      # Documentation
 ```
 
