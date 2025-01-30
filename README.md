@@ -29,7 +29,7 @@ This project performs text detection in images by dividing them into tiles and u
 1. Clone the repository:
    ```bash
    git clone https://github.com/Usamaniaz219/Paddle_OCR_for_Text_Detection__Recognition.git 
-   cd Paddle_OCR_for_Text_Detection_-_Recognition
+   cd Paddle_OCR_for_Text_Detection__Recognition
    ```
 2. Install dependencies:
    ```bash
